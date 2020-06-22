@@ -63,6 +63,10 @@ export default async ({
               (innerAcc, locale) => {
                 let innerValue = value[locale];
 
+                if (field.fieldType === 'text') {
+                  innerValue = JSON.stringify(innerValue, null, 2)
+                }
+
                 if (field.fieldType === 'lat_lon') {
                   innerValue = {
                     latitude: innerValue.lat,

@@ -73,12 +73,12 @@ module.exports = {
     "find": true
   },
   "items": {
+    "all": true,
     "validateExisting": true,
     "validateNew": true,
     "create": true,
     "duplicate": true,
     "update": true,
-    "all": true,
     "references": true,
     "find": true,
     "destroy": true,
@@ -99,7 +99,8 @@ module.exports = {
     "destroy": true,
     "batchDestroy": true,
     "update": true,
-    "batchAddTags": true
+    "batchAddTags": true,
+    "references": true
   },
   "uploadRequest": {
     "create": true
@@ -170,6 +171,7 @@ module.exports = {
   },
   "ssoGroups": {
     "all": true,
+    "copyRoles": true,
     "update": true,
     "destroy": true
   },
@@ -180,6 +182,9 @@ module.exports = {
   },
   "publicInfo": {
     "find": true
+  },
+  "dailyUsages": {
+    "all": true
   },
   "uploadTags": {
     "all": true,

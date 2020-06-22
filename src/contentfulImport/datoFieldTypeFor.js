@@ -3,6 +3,7 @@ export default field => {
     case 'Symbol':
       return 'string';
     case 'Text':
+    case 'RichText':
       return 'text';
     case 'Integer':
       return 'integer';

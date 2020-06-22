@@ -78,6 +78,18 @@ export default async ({ itemTypes, datoClient, contentfulData }) => {
         };
       }
 
+      if (
+        contentfulField.type === 'RichText'
+      ) {
+        fieldAttributes.appearance = {
+          editor: 'wysiwyg',
+          parameters: {
+            toolbar: ['bold'],
+          },
+          addons: [],
+        };
+      }
+
       while (true) {
         try {
           const datoField = await datoClient.fields.create(
